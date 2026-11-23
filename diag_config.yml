@@ -58,6 +58,13 @@ Obs:
   oce_cat: /glade/campaign/cgd/oce/projects/CESM-MOM6/diagnostics/oce-catalogs/reference-datasets.yml
   # Name of the WOA data in the ocean catalogs
   WOA: woa-2018-tx2_3v2-annual-all
+  # Name of the obs data used by drift.py (if empty: using the WOA value above)
+  # 'self' for comparing with the first 20 years of the current case
+  Drift: ''
+  # Name of the obs data used by equatorial_comparison.py (if empty: using the WOA value above)
+  Equatorial: ''
+  # Name of the obs data used by TS_levels.py (if empty: using the WOA value above)
+  TS_levels: ''
   # Name of the MLD data in the ocean catalogs
   MLD: mld-deboyer-2023-tx2_3v2
 
@@ -67,10 +74,9 @@ Misc:
   png_dir: PNG
   # path to pre-computed basin mask file; if empty, compute basin mask with genBasinMasks
   basin_file: ''
-  # <casename>_zonal_means.nc of another case to compare with in zonal_means; if empty, no comparison
-  zonal_mean: ''
-  # label of the zonal_mean case in the comparison figures; if empty, its casename is used
-  zonal_mean_sname: ''
+  # path/to/<casename>_zonal_means_????-????.nc for comparing with another case's zonal means
+  # 'self' for comparing with the first 20 years of the current case; no comparison if empty
+  zonal_mean_file: ''
 
 # dask_jobqueue cluster settings.
 # Edit <username> to your own username.
