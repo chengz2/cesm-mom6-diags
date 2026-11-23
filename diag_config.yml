@@ -67,6 +67,10 @@ Misc:
   png_dir: PNG
   # path to pre-computed basin mask file; if empty, compute basin mask with genBasinMasks
   basin_file: ''
+  # <casename>_zonal_means.nc of another case to compare with in zonal_means; if empty, no comparison
+  zonal_mean: ''
+  # label of the zonal_mean case in the comparison figures; if empty, its casename is used
+  zonal_mean_sname: ''
 
 # dask_jobqueue cluster settings.
 # Edit <username> to your own username.
